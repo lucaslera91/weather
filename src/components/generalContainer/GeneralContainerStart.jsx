@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Clock from '../clock/ClockComponent'
 import RestOfDays from '../restOfDays/RestOfDays'
 import Today from '../today/Today'
 import './generalContainer.css'
 import { WeatherConsumer } from '../../context/WeatherProvider'
 import { Navigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
+
 
 
 function GeneralContainerStart() {
@@ -25,6 +27,15 @@ function GeneralContainerStart() {
   const auxWeek = dayIndex[nombreDia]
   
   const diaPantalla = auxWeek + ' ' + dia + ' de ' + aux
+
+  useEffect(() => {
+    Swal.fire({
+      icon: 'info',
+      title: `Hola ${userName}`,
+      showConfirmButton: false,
+      timer: 1000
+    })
+  }, []);
 
   return(<>
   {!userName && <Navigate replace to='/'></Navigate>}

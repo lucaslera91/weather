@@ -7,8 +7,9 @@ import './logIn.css'
 function Login() {
   const { setUserName } = WeatherConsumer()
   const start = useRef()
+  const dismiss = useRef()
   const [go, setGo] = useState(false)
-  const name = localStorage.getItem('weatherAppName')
+  
   
   useEffect(() => {
     start.current.click()
@@ -28,6 +29,7 @@ function Login() {
       setGo(true)
       localStorage.setItem('weatherAppName', e.target[0].value)
       setUserName(e.target[0].value)
+      dismiss.current.click()
     }
  
   }
@@ -48,6 +50,7 @@ function Login() {
                 </div>
               
                 <button type="submit" className="btn btn-primary">Done!</button>
+                <button type="submit" ref={dismiss} data-dismiss="modal" className="closer">Done!</button>
                 
               </form>
             </div>
