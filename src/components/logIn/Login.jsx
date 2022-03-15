@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 import './logIn.css'
 
 function Login() {
-  const { setUserName } = WeatherConsumer()
+  const { setUserName, setGoSearch } = WeatherConsumer()
   const start = useRef()
   const dismiss = useRef()
   const [go, setGo] = useState(false)
@@ -28,6 +28,7 @@ function Login() {
       setGo(true)
       localStorage.setItem('weatherAppName', e.target[0].value)
       setUserName(e.target[0].value)
+      setGoSearch(true)
       dismiss.current.click()
     }
  

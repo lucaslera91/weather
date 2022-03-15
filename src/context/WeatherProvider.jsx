@@ -15,6 +15,7 @@ function WeatherProvider({children}) {
   const urlWeatherForcast = 'https://community-open-weather-map.p.rapidapi.com/forecast'
   const [userName, setUserName] = useState(localStorage.getItem('weatherAppName'))
   const [noAuth, setNoAuth] = useState('')
+  const [goSearch, setGoSearch] = useState(false)
 
 
   async function addItem(data){
@@ -31,7 +32,7 @@ function WeatherProvider({children}) {
 
 
   useEffect(() => {
-      if(userName){
+      if(goSearch){
         window.navigator.geolocation.getCurrentPosition(
           position => {
             setDir({lon: position.coords.longitude, lat: position.coords.latitude})
@@ -43,6 +44,7 @@ function WeatherProvider({children}) {
           }
         )
       }    
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   },[userName])
 
 
@@ -65,7 +67,7 @@ function WeatherProvider({children}) {
 
 
   return (
-    <WeatherContext.Provider value={{weatherData, weatherDataFutre, setUserName, noAuth}}>
+    <WeatherContext.Provider value={{weatherData, weatherDataFutre, setUserName, noAuth, setGoSearch}}>
         {children}
     </WeatherContext.Provider>
   )
