@@ -1,0 +1,20 @@
+.main{
+    padding: 20px;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  
+}
+
+.btn{
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+.closer{
+   visibility: hidden;
+}
+
+.btn.btn-primary{
+    margin-top: 15px;
+}

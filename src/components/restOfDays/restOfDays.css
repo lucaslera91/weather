@@ -1,0 +1,47 @@
+.rounded-xl{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(184, 221, 247, 0.5);
+}
+.col-3 {
+    display: flex;
+    justify-content: center;
+    
+}
+.col-2 {
+    display: flex;
+    justify-content: center;
+    
+}
+.color-contain{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 15%;
+    background-color: green;
+}
+.rangeAux{
+    
+    width: 100%;
+    height: 5px;
+    background: -webkit-linear-gradient(right,red,orange,yellow);
+    background: -moz-linear-gradient(right,red,orange,yellow);
+    background: -webkit-linear-gradient(right,red,orange,yellow);
+    background: -ms-linear-gradient(right,red,orange,yellow);
+    background: -o-linear-gradient(right,red,orange,yellow);
+    background: linear-gradient(to left,red,orange,yellow);
+    border-radius: 5rem;
+    /* background: -moz-linear-gradient(right,red,orange,yellow); */
+
+}
+
+.range-contain{
+    width: 100%;
+    height: 10px;
+    
+    border: 1px solid rgb(226, 223, 223);
+    
+}
+
+

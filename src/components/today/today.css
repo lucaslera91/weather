@@ -1,0 +1,13 @@
+.today-temp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.accordion-item{
+    background-color: transparent;
+}
+.hPa{
+    color: black;
+    font-size: 100rem;
+}
+

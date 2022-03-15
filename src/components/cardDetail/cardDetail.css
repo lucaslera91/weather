@@ -1,0 +1,107 @@
+.contenedor{
+    width: 125px;
+  
+}
+
+.card-item{
+  height: 125px;
+  background-color: transparent;
+  color: azure;
+  border: 1px solid aliceblue;
+  border-radius: 15px;
+  background-color:rgba(157, 215, 248, 0.959);
+  padding: 3px
+}
+.compas{
+  position: relative;
+  top: -15px;
+}
+.wind{
+  position: relative;
+  top: -30px;
+  display: flex;
+  justify-content: center;
+  transform-origin: bottom;
+  transform: rotate(-86deg);
+  
+}
+
+.wind i{
+  color: rgb(94, 97, 105);
+}
+
+.card-text{
+  
+  display: flex;
+  align-content: center;
+  font-size: 1.5rem;
+  height: 30px;
+ 
+}
+.icons{
+  
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  opacity: 0.7;
+  margin: -2px;
+}
+.inputPressure{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.lines{
+  display: flex;
+  justify-content: center;
+  height: 10px;
+  margin-top: 15px;
+}
+.pr1{
+  width: 47%;
+  height: 5px;
+  border-bottom: 1px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  display: flex;
+  justify-content: center;
+  
+}
+.pr2{
+  width: 6%;
+  height: 5px;
+}
+.progress{
+  width: 100%;
+  height: 10px;
+  border-radius: 3rem;
+}
+
+
+.card-title{font-size: medium;
+height: 30px;}
+
+@media (min-width: 350px) {
+    .contenedor {
+    width: 150px;
+    }
+    .card-title{font-size: large;}
+    .card.rounded{
+    height: 150px;
+    }
+
+  }
+
+  @media (min-width: 1023px) {
+    .contenedor {
+    width: 250px;
+
+    }
+    .card.rounded{
+        height: 250px;
+    }
+  }

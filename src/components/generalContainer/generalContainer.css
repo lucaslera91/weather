@@ -1,0 +1,38 @@
+
+.main-div.p-2{
+    /* background-image: url('https://services.meteored.com/img/article/cuantos-azules-tiene-el-cielo-289011-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; */
+    min-height: 95vh;
+}
+.wait{
+    padding: 50px;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    
+}
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+.top-titles.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: cornsilk;
+    background-color: transparent;
+    border: none;
+}
+.today{
+    border: none;
+}

@@ -1,0 +1,32 @@
+.rounded{
+    overflow: scroll;
+    overflow-y: hidden;
+}
+.rounded::-webkit-scrollbar {
+    display: none;
+}
+.td{
+   text-align: cetner;
+   padding-right: 50px;
+}
+th{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+
+}
+tr{
+    text-align: center;
+
+}
+.w-100.card.my-2.p-2{
+    color: cornsilk;
+    background-color: hsl(180,100%,50%,0.05);
+    
+}
+.contain-icon{
+  
+    width: 100%;
+    
+}
+
