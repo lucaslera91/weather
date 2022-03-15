@@ -55,7 +55,7 @@ function Login() {
           </div>
         </div>
       </div>
-      {go && <Navigate replace to='/home' ></Navigate>}
+      {go === true && <Navigate replace to='/home' ></Navigate>}
     </div>
   )
 }
