@@ -39,8 +39,9 @@ function Login() {
       <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog" role="document">
           <div className="modal-content">
-            <div className="modal-header">
+            <div className="modal-header flex-column">
               <h5 className="modal-title" id="exampleModalLabel">Nos permitis utilizar tu ubicacion para ver el clima?</h5>
+              <p className="text-muted" id="exampleModalLabel">Tambien sera util para conocer el alcance de nuestra app.</p>
             </div>
             <div className="modal-body">
               <form onSubmit={(e)=> handleSumbitName(e)}>
@@ -49,7 +50,7 @@ function Login() {
                   <input type="text"  className="form-control"/>
                 </div>
               
-                <button type="submit" className="btn btn-primary">Done!</button>
+                <button type="submit" className="btn btn-primary">De acuerdo!</button>
                 <button type="submit" ref={dismiss} data-dismiss="modal" className="closer">Done!</button>
                 
               </form>
