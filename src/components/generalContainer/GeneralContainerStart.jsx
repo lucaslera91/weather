@@ -6,6 +6,7 @@ import './generalContainer.css'
 import { WeatherConsumer } from '../../context/WeatherProvider'
 import { Navigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
+import AuthError from '../AuthError'
 
 
 
@@ -39,7 +40,7 @@ function GeneralContainerStart() {
   }, []);
 
   return(<>
-  {noAuth !== '' && <h2>{userName} {noAuth}</h2>}
+  {noAuth !== '' && (<AuthError user={userName} noAuth={noAuth}/>)}
   {!userName && <Navigate replace to='/'></Navigate>}
   {userName === null && <Navigate replace to='/'></Navigate>}
 

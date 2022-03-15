@@ -39,7 +39,7 @@ function WeatherProvider({children}) {
             console.log(position)
           }, err => {
             console.log(err)
-            setNoAuth('Por favor conceder acceso a tu ubicacion al navegador')
+            setNoAuth('por favor conceder acceso a tu ubicacion al navegador')
           }
         )
       }    

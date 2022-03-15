@@ -5,6 +5,10 @@
     background-repeat: no-repeat; */
     min-height: 95vh;
 }
+.auth{
+    color: aliceblue;
+    padding: 50px;
+}
 .wait{
     padding: 50px;
     min-height: 90vh;
