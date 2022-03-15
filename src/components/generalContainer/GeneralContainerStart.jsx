@@ -31,13 +31,7 @@ function GeneralContainerStart() {
     if(userName !== 'null' && userName){
       Swal.fire({
         title: `Bienvenido ${userName}!`,
-        showClass: {
-          popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-          popup: 'animate__animated animate__fadeOutUp'
-        },
-        timer: 2000
+        timer: 1250
       })
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
