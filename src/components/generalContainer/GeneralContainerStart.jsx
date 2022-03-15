@@ -11,7 +11,7 @@ import Swal from 'sweetalert2'
 
 function GeneralContainerStart() {
 
-  const { weatherData, weatherDataFutre} = WeatherConsumer()
+  const { weatherData, weatherDataFutre, noAuth} = WeatherConsumer()
   
   const dayIndex = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado']
   const monthIndex = {0: 'Ene', 1:'Feb', 2:'Mar', 3:'Abr', 4:'May', 5:'Jun', 6:'Jul', 7:'Ago', 8:'Sep', 9:'Oct', 10:'Nov', 11: 'Dic'}
@@ -35,9 +35,11 @@ function GeneralContainerStart() {
       showConfirmButton: false,
       timer: 1000
     })
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return(<>
+  {noAuth !== '' && <h2>{userName} {noAuth}</h2>}
   {!userName && <Navigate replace to='/'></Navigate>}
   {userName === null && <Navigate replace to='/'></Navigate>}
 
@@ -48,7 +50,6 @@ function GeneralContainerStart() {
         </div>
       </h4>
   }
-
   {Object.keys(weatherData).length !== 0 && Object.keys(weatherDataFutre).length !== 0 && (
                   <div className='main-div p-2'>
                         <div className='top-titles card'>

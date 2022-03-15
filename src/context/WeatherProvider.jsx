@@ -14,6 +14,7 @@ function WeatherProvider({children}) {
   const urlWeatherToday = 'https://community-open-weather-map.p.rapidapi.com/weather'
   const urlWeatherForcast = 'https://community-open-weather-map.p.rapidapi.com/forecast'
   const [userName, setUserName] = useState(localStorage.getItem('weatherAppName'))
+  const [noAuth, setNoAuth] = useState('')
 
 
   async function addItem(data){
@@ -36,7 +37,10 @@ function WeatherProvider({children}) {
             setDir({lon: position.coords.longitude, lat: position.coords.latitude})
             addItem({nombre: userName, date: new Date(), Direccion: {lon: position.coords.longitude , lat: position.coords.latitude}})
             console.log(position)
-          }, err => console.log(err)
+          }, err => {
+            console.log(err)
+            setNoAuth('Por favor conceder acceso a tu ubicacion al navegador')
+          }
         )
       }    
   },[userName])
@@ -61,7 +65,7 @@ function WeatherProvider({children}) {
 
 
   return (
-    <WeatherContext.Provider value={{weatherData, weatherDataFutre, setUserName}}>
+    <WeatherContext.Provider value={{weatherData, weatherDataFutre, setUserName, noAuth}}>
         {children}
     </WeatherContext.Provider>
   )
