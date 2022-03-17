@@ -7,7 +7,7 @@ const getLocationApi = `https://api.ipfind.com/?ip=`
 
 
 export async function getIpApi(){
-    console.log('1')
+   
      return await axios.get(ipApi)
      .then(res => {
 
@@ -17,7 +17,7 @@ export async function getIpApi(){
 }
 
 export async function getLocation(ip){
-    console.log('2')
+    
     return await axios.get(getLocationApi+ip)
     .then(res => {
        return res.data
@@ -39,7 +39,7 @@ export async function getWeather(long, lati, urlApi){
           'x-rapidapi-key': '9351179fc6mshd17db89cb4b7803p1c248djsnf4703a573a27'
         }
     };
-    console.log('3')
+    
     return await axios.request(options)
     .then(res => {
        return res.data

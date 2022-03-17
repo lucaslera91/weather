@@ -21,13 +21,18 @@ function WeatherProvider({children}) {
   async function addItem(data){
     const col = collection(db, 'data')
     const itemAdded = await addDoc(col, data)
-    console.log(itemAdded)
   }
+
+  useEffect(() => {
+    
+    if(userName !== '' && userName !== 'null' && userName){
+      setGoSearch(true)
+    }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   useEffect(()=>{
     localStorage.setItem('weatherAppName', userName)
-    console.log('yay')
-    console.log(userName)
   },[userName])   
 
 
@@ -37,7 +42,6 @@ function WeatherProvider({children}) {
           position => {
             setDir({lon: position.coords.longitude, lat: position.coords.latitude})
             addItem({date: new Date(), Direccion: {lon: position.coords.longitude , lat: position.coords.latitude}})
-            console.log(position)
           }, err => {
             console.log(err)
             setNoAuth('por favor conceder acceso a tu ubicacion al navegador')
@@ -45,7 +49,7 @@ function WeatherProvider({children}) {
         )
       }    
       // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[userName])
+  },[goSearch])
 
 
   useEffect(() => {
@@ -53,15 +57,11 @@ function WeatherProvider({children}) {
       const third = helper.getWeather(dir.lon, dir.lat, urlWeatherToday)
       // eslint-disable-next-line react-hooks/exhaustive-deps
       .then(res => setWeatherData(res))
-      .then(res => console.log(res))
       .catch(console.error)
-      console.log(third)
-
+  
       const fourth = helper.getWeather(dir.lon, dir.lat, urlWeatherForcast)
       .then(res => setWeatherDataFutre(res))
-      .then(res => {console.log(res)})
       .catch(console.error)
-      console.log(fourth)
     }
   }, [dir])
 
