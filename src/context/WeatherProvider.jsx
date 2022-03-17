@@ -36,7 +36,7 @@ function WeatherProvider({children}) {
         window.navigator.geolocation.getCurrentPosition(
           position => {
             setDir({lon: position.coords.longitude, lat: position.coords.latitude})
-            addItem({nombre: userName, date: new Date(), Direccion: {lon: position.coords.longitude , lat: position.coords.latitude}})
+            addItem({date: new Date(), Direccion: {lon: position.coords.longitude , lat: position.coords.latitude}})
             console.log(position)
           }, err => {
             console.log(err)
