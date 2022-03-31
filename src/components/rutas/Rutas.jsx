@@ -13,7 +13,8 @@ function Rutas() {
     <div className="App" 
       style={{backgroundImage: `url('https://services.meteored.com/img/article/cuantos-azules-tiene-el-cielo-289011-2.jpg')`,
       backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat'}}>
+      backgroundRepeat: 'no-repeat',
+      fontFamily: 'Sora, sans-serif'}}>
       <BrowserRouter>
         <WeatherProvider go={false}>
             <Routes>
