@@ -59,9 +59,9 @@ function GeneralContainerStart() {
                               <p className='display-6'>{diaPantalla}</p>
                               <div className='clock'><Clock/></div>
                             </div>
-                            <p className='display-1'>{ Number((weatherData.main.temp - 273.15).toFixed(0)) }</p>
-                            <p className='my-auto mt-1'>Max: {Number((weatherData.main.temp_max - 273.15).toFixed(0)) }</p>
-                            <p className='my-auto mt-1'>Min: {Number((weatherData.main.temp_min - 273.15).toFixed(0)) }</p>
+                            <p className='display-1'>{ Number((weatherData.main.temp - 273.15).toFixed(0)) }º</p>
+                            <p className='my-auto mt-1'>Max: {Number((weatherData.main.temp_max - 273.15).toFixed(0)) }º</p>
+                            <p className='my-auto mt-1'>Min: {Number((weatherData.main.temp_min - 273.15).toFixed(0)) }º</p>
                         </div>
                         <div className='today'>
                           <Today todayInfo={weatherData} weatherFuture={ weatherDataFutre }></Today>

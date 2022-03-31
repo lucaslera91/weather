@@ -19,7 +19,6 @@ function Rutas() {
             <Routes>
                 <Route path='/' element={<Login/>}/>
                 <Route path='/home' element={<GeneralContainerStart/>}/>
-       
             </Routes>
         </WeatherProvider>
         <Footer/>

@@ -43,7 +43,7 @@ function TodayTemperature({today, temps}) {
                     {temps.list.map((item, id) => {
                         return(
                             <td key={id}> 
-                                <p>{(item.main.temp - 273.15).toFixed(0)}</p>
+                                <p>{(item.main.temp - 273.15).toFixed(0)}º</p>
                             </td>
                         )
                     })}
